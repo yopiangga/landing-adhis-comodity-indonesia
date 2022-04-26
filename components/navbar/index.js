@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo2 from "public/logo2.png";
+import Link from "next/link";
 
 export function NavbarDashboard({ title }) {
   return (
@@ -32,10 +33,10 @@ export function NavbarDashboard({ title }) {
 export function NavbarLanding() {
   return (
     <div>
-      <div className="navbar bg-base-100 fixed z-50">
+      <div className="navbar bg-transparent absolute z-50">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex="0" className="btn btn-ghost lg:hidden">
+            <label tabIndex="0" className="btn btn-white lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -53,29 +54,48 @@ export function NavbarLanding() {
             </label>
             <ul
               tabIndex="0"
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  text-lg font-medium"
             >
               <li>
-                <a>Home</a>
+                <Link href={"/"}>
+                  <a>Home</a>
+                </Link>
               </li>
 
               <li>
-                <a>About Us</a>
+                <Link href={"/about"}>
+                  <a>About Us</a>
+                </Link>
               </li>
               <li>
-                <a>Product</a>
+                <Link href={"/product"}>
+                  <a>Product</a>
+                </Link>
               </li>
               <li>
-                <a>News</a>
+                <Link href={"/news"}>
+                  <a>News</a>
+                </Link>
               </li>
               <li>
-                <a>Our Team</a>
+                <Link href={"/team"}>
+                  <a>Our Team</a>
+                </Link>
               </li>
               <li>
-                <a>FAQ</a>
+                <Link href={"/faq"}>
+                  <a>FAQ</a>
+                </Link>
               </li>
               <li>
-                <a>Terms</a>
+                <Link href={"/term"}>
+                  <a>Term</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/certificate"}>
+                  <a>Certificate</a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,29 +103,48 @@ export function NavbarLanding() {
             <Image src={logo2} layout="responsive" objectFit="cover" />
           </a>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden lg:flex text-white text-lg font-medium">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <a>Home</a>
+              <Link href={"/"}>
+                <a className="active:bg-green-500">Home</a>
+              </Link>
             </li>
 
             <li>
-              <a>About Us</a>
+              <Link href={"/about"}>
+                <a className="active:bg-green-500">About Us</a>
+              </Link>
             </li>
             <li>
-              <a>Product</a>
+              <Link href={"/product"}>
+                <a className="active:bg-green-500">Product</a>
+              </Link>
             </li>
             <li>
-              <a>News</a>
+              <Link href={"/news"}>
+                <a className="active:bg-green-500">News</a>
+              </Link>
             </li>
             <li>
-              <a>Our Team</a>
+              <Link href={"/team"}>
+                <a className="active:bg-green-500">Our Team</a>
+              </Link>
             </li>
             <li>
-              <a>FAQ</a>
+              <Link href={"/faq"}>
+                <a className="active:bg-green-500">FAQ</a>
+              </Link>
             </li>
             <li>
-              <a>Terms</a>
+              <Link href={"/term"}>
+                <a className="active:bg-green-500">Term</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/certificate"}>
+                <a className="active:bg-green-500">Certificate</a>
+              </Link>
             </li>
           </ul>
         </div>

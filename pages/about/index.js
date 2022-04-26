@@ -3,6 +3,7 @@ import { FiCheck, FiWatch, FiAward } from "react-icons/fi";
 import { BiLike } from "react-icons/bi";
 import { BsGraphUp } from "react-icons/bs";
 import { FaRegHandshake } from "react-icons/fa";
+import Link from "next/link";
 
 import Image from "next/image";
 import maps from "public/maps/image.png";
@@ -26,7 +27,7 @@ export default function About() {
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-indigo-500 to-purple-600">
+            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
               About Us
             </h1>
 
@@ -35,12 +36,11 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <a
-                className="block w-full px-12 py-3 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded sm:w-auto active:text-opacity-75 hover:bg-transparent hover:text-white focus:outline-none focus:ring"
-                href="/get-started"
-              >
-                Show Product
-              </a>
+              <Link href="/product">
+                <a className="block w-full px-12 py-3 text-sm font-medium text-white bg-green-600 border border-green-600 rounded sm:w-auto active:text-opacity-75 hover:bg-transparent hover:text-white focus:outline-none focus:ring">
+                  Show Product
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function About() {
         <div className="container px-6 py-10 mx-auto">
           <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
             WHY YOU <br /> SHOULD{" "}
-            <span className="underline decoration-indigo-500">CHOOSE US?</span>
+            <span className="underline decoration-green-500">CHOOSE US?</span>
           </h1>
 
           <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
@@ -91,8 +91,8 @@ export default function About() {
           </p>
 
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div className="p-8 space-y-3 border-2 border-indigo-400 dark:border-indigo-300 rounded-xl">
-              <span className="inline-block text-indigo-500 dark:text-indigo-400">
+            <div className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl">
+              <span className="inline-block text-green-500 dark:text-green-400">
                 <div className="w-16">
                   <Image src={ceklis} layout="responsive" objectFit="cover" />
                 </div>
@@ -107,8 +107,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="p-8 space-y-3 border-2 border-indigo-400 dark:border-indigo-300 rounded-xl">
-              <span className="inline-block text-indigo-500 dark:text-indigo-400">
+            <div className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl">
+              <span className="inline-block text-green-500 dark:text-green-400">
                 <div className="w-16">
                   <Image
                     src={stopwatch}
@@ -127,8 +127,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="p-8 space-y-3 border-2 border-indigo-400 dark:border-indigo-300 rounded-xl">
-              <span className="inline-block text-indigo-500 dark:text-indigo-400">
+            <div className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl">
+              <span className="inline-block text-green-500 dark:text-green-400">
                 <div className="w-16">
                   <Image src={medali} layout="responsive" objectFit="cover" />
                 </div>
@@ -147,7 +147,7 @@ export default function About() {
       </section>
 
       <div className="flex justify-center bg-gray-50 overflow-hidden">
-        <div className="container w-full max-w-7xl py-16 m-auto space-y-8 text-gray-500 md:px-12">
+        <div className="container w-full max-w-7xl py-16 m-auto space-y-8 text-gray-500 px-12">
           <div>
             <span className="text-gray-600 text-lg font-semibold">
               Main value
@@ -168,7 +168,7 @@ export default function About() {
                 </div>
 
                 <div className="space-y-2">
-                  <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-indigo-600">
+                  <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-green-600">
                     Passionate People
                   </h5>
                 </div>
@@ -181,7 +181,7 @@ export default function About() {
                 </div>
 
                 <div className="space-y-2">
-                  <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-indigo-600">
+                  <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-green-600">
                     Supplier and Customer Partnerships
                   </h5>
                 </div>
@@ -194,7 +194,7 @@ export default function About() {
                 </div>
 
                 <div className="space-y-2">
-                  <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-indigo-600">
+                  <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-green-600">
                     Strong Financial Performances
                   </h5>
                 </div>
@@ -213,18 +213,18 @@ export default function About() {
               </a>
             </div>
             <div className="w-full mb-10">
-              <div className="text-3xl text-indigo-500 text-left leading-tight h-3">
+              <div className="text-3xl text-green-500 text-left leading-tight h-3">
                 “
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
                 WE ARE READY TO SERVE YOU WITH HIGHER QUALITY SPICES.
               </p>
-              <div className="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
+              <div className="text-3xl text-green-500 text-right leading-tight h-3 -mt-3">
                 ”
               </div>
             </div>
             <div className="w-full">
-              <p className="text-md text-indigo-500 font-bold text-center">
+              <p className="text-md text-green-500 font-bold text-center">
                 PT ADHIS COMMODITY INDONESIA
               </p>
             </div>

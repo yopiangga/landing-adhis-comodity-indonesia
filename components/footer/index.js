@@ -11,9 +11,15 @@ export function FooterLanding() {
               <Image src={logo2} layout="responsive" objectFit="cover" />
             </span>
 
-            <p className="max-w-xs mt-4 text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-              accusantium.
+            <h2 className="mt-4 font-medium">PT Adhis Commodity Indonesia</h2>
+
+            <p className=" mt-2 text-sm text-gray-500">
+              We are well-known for producing better products and servicing our
+              devoted customers 24/7. Our professionals have in-depth knowledge
+              of the auditing procedures and inspect the final consignment
+              indepth before shipment. We have a well-equipped, spacious, neat
+              and clean warehouse. We also have a packaging unit to ensure
+              longer shelf life of the products.
             </p>
 
             <div className="flex mt-8 space-x-6 text-gray-500">

@@ -32,6 +32,7 @@ import g17 from "public/gallery/17.jpg";
 import g18 from "public/gallery/18.jpg";
 import g19 from "public/gallery/19.jpg";
 import g20 from "public/gallery/20.jpg";
+import { NavbarLanding } from "components/navbar";
 
 export default function Home() {
   const gallery = [
@@ -92,7 +93,7 @@ export default function Home() {
 
   return (
     <LayoutLanding>
-      <div className="">
+      <div className="relative">
         <AwesomeSlider>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
             <div className="w-full absolute">
@@ -102,7 +103,7 @@ export default function Home() {
               <h2 className="text-2xl font-black mb-4 text-white">
                 Welcome to Our Company!
               </h2>
-              <h1 className="text-6xl font-bold mb-4 text-indigo-500">
+              <h1 className="text-6xl font-bold mb-4 text-green-500">
                 PT. ADHIS COMMODITY INDONESIA
               </h1>
               <p className="text-white text-lg mb-10">
@@ -111,7 +112,7 @@ export default function Home() {
               </p>
               <a
                 href=""
-                className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-indigo-500 rounded-lg shadow-xl hover:bg-indigo-600"
+                className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-green-500 rounded-lg shadow-xl hover:bg-green-600"
               >
                 LEARN MORE
               </a>
@@ -125,7 +126,7 @@ export default function Home() {
               <h2 className="text-2xl font-black mb-4 text-white">
                 Welcome to Our Company!
               </h2>
-              <h1 className="text-6xl font-bold mb-4 text-indigo-500">
+              <h1 className="text-6xl font-bold mb-4 text-green-500">
                 PT. ADHIS COMMODITY INDONESIA
               </h1>
               <p className="text-white text-lg mb-10">
@@ -134,7 +135,7 @@ export default function Home() {
 
               <a
                 href=""
-                className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-indigo-500 rounded-lg shadow-xl hover:bg-indigo-600"
+                className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-green-500 rounded-lg shadow-xl hover:bg-green-600"
               >
                 LEARN MORE
               </a>
@@ -170,7 +171,7 @@ export default function Home() {
       <div className="flex justify-center relative">
         <div className="max-w-7xl w-full py-16">
           <div className="lg:text-center">
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+            <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
               Gallery
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -200,7 +201,7 @@ export default function Home() {
       <div className="flex justify-center relative">
         <div className="max-w-7xl w-full py-16">
           <div className="lg:text-center">
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+            <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
               Testimonials
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -219,13 +220,13 @@ export default function Home() {
                   className="bg-white dark:bg-gray-800 w-72 shadow-lg mx-auto rounded-xl p-4"
                 >
                   <p className="text-gray-600 dark:text-white">
-                    <span className="font-bold text-indigo-500 text-lg">“</span>
+                    <span className="font-bold text-green-500 text-lg">“</span>
                     {el.text}
-                    <span className="font-bold text-indigo-500 text-lg">”</span>
+                    <span className="font-bold text-green-500 text-lg">”</span>
                   </p>
                   <div className="flex items-center mt-4">
                     <div className="flex flex-col ml-0 justify-between">
-                      <span className="font-semibold text-indigo-500 text-sm">
+                      <span className="font-semibold text-green-500 text-sm">
                         {el.name}
                       </span>
                       <span className="dark:text-gray-400 text-xs flex items-center">
