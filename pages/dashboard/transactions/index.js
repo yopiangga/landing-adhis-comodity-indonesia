@@ -20,33 +20,7 @@ function DashboardTransaction() {
                   <th>Aksi</th>
                 </tr>
               </thead>
-              <tbody>
-                {data.map((item, index) => {
-                  return (
-                    <tr key={index}>
-                      <th>{index + 1}</th>
-                      <td>Cy Ganderton</td>
-                      <td>
-                        <div className="badge badge-accent">Rp 50.000</div>
-                      </td>
-                      <td>
-                        <div className="badge badge-accent">Terbayar</div>
-                      </td>
-                      <td>
-                        <button className="btn btn-xs mx-1 btn-info">
-                          Detail
-                        </button>
-                        <button className="btn btn-xs mx-1 btn-warning">
-                          Edit
-                        </button>
-                        <button className="btn btn-xs mx-1 btn-error">
-                          Hapus
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </div>

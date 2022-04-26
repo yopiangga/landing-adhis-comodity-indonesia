@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.4",
     "carousel-react-rcdev": "^0.0.3",
     "daisyui": "^2.11.0",

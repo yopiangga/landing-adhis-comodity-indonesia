@@ -4,15 +4,21 @@ import Image from "next/image";
 
 export default function Faq() {
   return (
-    <LayoutLanding>
+    <LayoutLanding page="term" title="Term">
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
+            <h1
+              className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
+              data-aos="fade-left"
+            >
               OUR PAYMENT TERM
             </h1>
 
-            <p className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+            <p
+              className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+              data-aos="fade-right"
+            >
               All payments should be made via T/T (Telegraph transfer) or L/C
               Irrevocable (Letter of Credit)
             </p>
@@ -24,15 +30,24 @@ export default function Faq() {
         <div className="w-full max-w-7xl py-16">
           <div className="container mx-auto px-6 p-6 bg-white dark:bg-gray-800">
             <div className="mb-16 text-center">
-              <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
+              <h2
+                className="text-base text-green-600 font-semibold tracking-wide uppercase"
+                data-aos="fade-up"
+              >
                 TERM
               </h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              <p
+                className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+                data-aos="fade-up"
+              >
                 OUR DELIVERY TERM
               </p>
             </div>
             <div className="flex flex-wrap my-12 dark:text-white">
-              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8"
+                data-aos="fade-right"
+              >
                 <div className="flex items-center mb-6">
                   <svg
                     width="20"
@@ -54,7 +69,10 @@ export default function Faq() {
                   goods arriving at our warehouse is international port.
                 </p>
               </div>
-              <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8">
+              <div
+                className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8"
+                data-aos="fade-up"
+              >
                 <div className="flex items-center mb-6">
                   <svg
                     width="20"
@@ -76,7 +94,10 @@ export default function Faq() {
                   port in your country is our responsibility.
                 </p>
               </div>
-              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8"
+                data-aos="fade-left"
+              >
                 <div className="flex items-center mb-6">
                   <svg
                     width="20"
@@ -107,14 +128,19 @@ export default function Faq() {
       <div className="bg-white dark:bg-gray-800 ">
         <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
-            <span className="block">For More Information About</span>
-            <span className="block text-green-500">
+            <span className="block" data-aos="fade-up">
+              For More Information About
+            </span>
+            <span className="block text-green-500" data-aos="fade-up">
               Shipment Procces And Term Of Payment
             </span>
           </h2>
 
           <div className="lg:mt-0 lg:flex-shrink-0">
-            <div className="mt-12 inline-flex rounded-md shadow">
+            <div
+              className="mt-12 inline-flex rounded-md shadow"
+              data-aos="fade-up"
+            >
               <a
                 href="https://wa.me/6283804175139"
                 target="_blank"

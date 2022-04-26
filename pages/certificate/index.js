@@ -5,18 +5,62 @@ import djp from "public/certificate/djp.jpg";
 import menkumham from "public/certificate/menkumham.jpg";
 import mendagri from "public/certificate/mendagri.jpg";
 import oss from "public/certificate/oss.jpg";
+import { useState } from "react";
+import { addMessage } from "services/message_services";
 
 export default function Faq() {
+  const [firstname, setFirstName] = useState();
+  const [lastname, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [text, setText] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const handleFirstname = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastname = (e) => {
+    setLastName(e.target.value);
+  };
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleText = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (firstname && lastname && email && text) {
+      setLoading(true);
+      result = await addMessage(firstname + " " + lastname, email, text);
+      setLoading(false);
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setText("");
+    }
+  };
+
   return (
-    <LayoutLanding>
+    <LayoutLanding page="certificate" title="Certificate">
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
+            <h1
+              className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
+              data-aos="fade-left"
+            >
               Certificate
             </h1>
 
-            <p className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+            <p
+              className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+              data-aos="fade-right"
+            >
               Clear legality by the company
             </p>
           </div>
@@ -27,24 +71,42 @@ export default function Faq() {
         <div className="w-full max-w-7xl py-16">
           <div className="container mx-auto px-6 p-6 bg-white dark:bg-gray-800">
             <div className="mb-16 text-center">
-              <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
+              <h2
+                className="text-base text-green-600 font-semibold tracking-wide uppercase"
+                data-aos="fade-up"
+              >
                 Certificate
               </h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              <p
+                className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+                data-aos="fade-up"
+              >
                 We Are Registered On:
               </p>
             </div>
             <div className="flex flex-wrap my-12 dark:text-white">
-              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/4 p-8">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r lg:w-1/4 p-8"
+                data-aos="fade-right"
+              >
                 <Image src={djp} layout="responsive" objectFit="cover" />
               </div>
-              <div className="w-full border-b md:w-1/2 lg:w-1/4 lg:border-r p-8">
+              <div
+                className="w-full border-b md:w-1/2 lg:w-1/4 lg:border-r p-8"
+                data-aos="fade-up"
+              >
                 <Image src={oss} layout="responsive" objectFit="cover" />
               </div>
-              <div className="w-full border-b md:w-1/2 lg:w-1/4 lg:border-r p-8">
+              <div
+                className="w-full border-b md:w-1/2 lg:w-1/4 lg:border-r p-8"
+                data-aos="fade-up"
+              >
                 <Image src={mendagri} layout="responsive" objectFit="cover" />
               </div>
-              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/4 lg:border-r-0 p-8">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r lg:w-1/4 lg:border-r-0 p-8"
+                data-aos="fade-left"
+              >
                 <Image src={menkumham} layout="responsive" objectFit="cover" />
               </div>
             </div>
@@ -56,26 +118,36 @@ export default function Faq() {
         <div className="max-w-7xl w-full py-16 px-12 mx-auto">
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:py-12 lg:col-span-2">
-              <p className="max-w-xl font-bold mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+              <p
+                className="max-w-xl font-bold mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+                data-aos="fade-right"
+              >
                 Do You Need Help for “How to Order Our Products”? We Are Ready!
                 Contact Us, Now!
               </p>
 
               <div className="mt-8">
-                <a href="" className="text-2xl font-bold text-green-600">
+                <a
+                  href=""
+                  className="text-2xl font-bold text-green-600"
+                  data-aos="fade-right"
+                >
                   {" "}
                   +62 83804175139{" "}
                 </a>
 
-                <address className="mt-2 not-italic">
+                <address className="mt-2 not-italic" data-aos="fade-up">
                   Instagram @abi_adhis
                 </address>
-                <address>adhiscomindo@gmail.com</address>
+                <address data-aos="fade-up">adhiscomindo@gmail.com</address>
               </div>
             </div>
 
-            <div className="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3">
-              <form action="" className="space-y-4">
+            <div
+              className="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3"
+              data-aos="fade-up"
+            >
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <label className="sr-only" forHtml="firstname">
@@ -86,6 +158,7 @@ export default function Faq() {
                       placeholder="First Name"
                       type="text"
                       id="firstname"
+                      onChange={handleFirstname}
                     />
                   </div>
 
@@ -98,6 +171,7 @@ export default function Faq() {
                       placeholder="Last Name"
                       type="text"
                       id="lastname"
+                      onChange={handleLastname}
                     />
                   </div>
                 </div>
@@ -110,6 +184,7 @@ export default function Faq() {
                     placeholder="Email address"
                     type="email"
                     id="email"
+                    onChange={handleEmail}
                   />
                 </div>
 
@@ -121,7 +196,8 @@ export default function Faq() {
                     className="w-full p-3 text-sm border-gray-200 outline-none focus:border-green-400 border-2 rounded-lg"
                     placeholder="Message"
                     rows="8"
-                    id="message"
+                    id="text"
+                    onChange={handleText}
                   ></textarea>
                 </div>
 
@@ -130,7 +206,10 @@ export default function Faq() {
                     type="submit"
                     className="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
                   >
-                    <span className="font-medium"> Send Enquiry </span>
+                    <span className="font-medium">
+                      {" "}
+                      {loading ? "Loading ..." : "Send Enquiry "}
+                    </span>
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

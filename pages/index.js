@@ -10,7 +10,7 @@ import { BiWorld } from "react-icons/bi";
 import { FaLeaf } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-// import Carousel from "carousel-react-rcdev";
+import Link from "next/link";
 
 import g1 from "public/gallery/1.jpg";
 import g2 from "public/gallery/2.jpg";
@@ -33,6 +33,9 @@ import g18 from "public/gallery/18.jpg";
 import g19 from "public/gallery/19.jpg";
 import g20 from "public/gallery/20.jpg";
 import { NavbarLanding } from "components/navbar";
+
+import global from "public/icon/global.png";
+import daun from "public/icon/daun.png";
 
 export default function Home() {
   const gallery = [
@@ -92,92 +95,164 @@ export default function Home() {
   ];
 
   return (
-    <LayoutLanding>
+    <LayoutLanding page="home" title="Home">
       <div className="relative">
         <AwesomeSlider>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
             <div className="w-full absolute">
               <Image src={bg1} layout="responsive" objectFit="contain" />
             </div>
-            <div className="h-96 max-w-3xl relative text-center">
-              <h2 className="text-2xl font-black mb-4 text-white">
+            <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+            <div className=" max-w-3xl relative text-center">
+              <h2
+                className="text-2xl font-black mb-4 text-white"
+                data-aos="fade-up"
+              >
                 Welcome to Our Company!
               </h2>
-              <h1 className="text-6xl font-bold mb-4 text-green-500">
+              <h1
+                className="lg:text-6xl text-xl font-bold mb-4 text-green-500"
+                data-aos="fade-right"
+              >
                 PT. ADHIS COMMODITY INDONESIA
               </h1>
-              <p className="text-white text-lg mb-10">
+              <p className="text-white text-lg mb-10" data-aos="fade-left">
                 WE ARE THE LEADING COMPANY IN THE CULTIVATION AND MARKETING OF
                 FRESH SPICES TO INTERNATIONAL MARKETS
               </p>
-              <a
-                href=""
-                className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-green-500 rounded-lg shadow-xl hover:bg-green-600"
-              >
-                LEARN MORE
-              </a>
+              <Link href={`/about`}>
+                <a
+                  className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-green-500 rounded-lg shadow-xl hover:bg-green-600"
+                  data-aos="fade-up"
+                >
+                  LEARN MORE
+                </a>
+              </Link>
             </div>
           </div>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
             <div className="w-full absolute">
               <Image src={bg2} layout="responsive" objectFit="contain" />
             </div>
-            <div className="h-96 max-w-3xl relative text-center">
-              <h2 className="text-2xl font-black mb-4 text-white">
+            <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+            <div className=" max-w-3xl relative text-center">
+              <h2
+                className="text-2xl font-black mb-4 text-white"
+                data-aos="fade-up"
+              >
                 Welcome to Our Company!
               </h2>
-              <h1 className="text-6xl font-bold mb-4 text-green-500">
+              <h1
+                className="lg:text-6xl text-xl font-bold mb-4 text-green-500"
+                data-aos="fade-left"
+              >
                 PT. ADHIS COMMODITY INDONESIA
               </h1>
-              <p className="text-white text-lg mb-10">
+              <p className="text-white text-lg mb-10" data-aos="fade-right">
                 OUR FRESH SPICES MAKE FOOD AND DRINK AN EXPERIENCE TO REMEMBER
               </p>
-
-              <a
-                href=""
-                className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-green-500 rounded-lg shadow-xl hover:bg-green-600"
-              >
-                LEARN MORE
-              </a>
+              <Link href={`/about`}>
+                <a
+                  className="block px-5 py-3 mx-auto w-fit font-medium text-white bg-green-500 rounded-lg shadow-xl hover:bg-green-600"
+                  data-aos="fade-up"
+                >
+                  LEARN MORE
+                </a>
+              </Link>
             </div>
           </div>
         </AwesomeSlider>
       </div>
-      <div className="flex justify-center relative bg-gray-900">
-        <div className="w-full absolute h-full">
-          <Image src={visionMission} layout="fill" objectFit="cover" />
-        </div>
-        <div className="max-w-7xl w-full py-16 grid gap-5 md:grid-cols-1 lg:grid-cols-2 relative text-white text-center">
-          <div className="left flex flex-col items-center justify-center">
-            <h2 className="font-bold text-3xl mb-5">OUR VISION</h2>
-            <BiWorld size={72} className="mb-5" />
-            <p className="text-lg">To be The Centre of Excellence for Spices</p>
-          </div>
-          <div className="right flex flex-col items-center justify-center">
-            <h2 className="font-bold text-3xl mb-5">OUR MISSION</h2>
-            <FaLeaf size={72} className="mb-5" />
-            <p className="text-lg">
-              We grow and sell quality, fresh spices products that simplify and
-              enhance the consumer cooking experience
-            </p>
-            <p className="text-lg">
-              We grow the highest-quality products in the spices market segment
-              in worldwide
-            </p>
-          </div>
+
+      <div className="flex justify-center relative">
+        <div className=" w-full">
+          <section className="bg-white dark:bg-gray-900">
+            <div className="container px-6 py-10 mx-auto">
+              <h1
+                className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
+                data-aos="fade-right"
+              >
+                What is our <br />
+                <span className="underline decoration-green-500">
+                  vision and mission?
+                </span>
+              </h1>
+
+              <p
+                className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300"
+                data-aos="fade-up"
+              >
+                A dream booster to fulfill all your needs
+              </p>
+
+              <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-2">
+                <div
+                  className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl"
+                  data-aos="fade-up"
+                >
+                  <span className="inline-block text-green-500 dark:text-green-400">
+                    <div className="w-16">
+                      <Image
+                        src={global}
+                        layout="responsive"
+                        objectFit="cover"
+                      />
+                    </div>
+                  </span>
+                  <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                    OUR VISION
+                  </h1>
+
+                  <p className="text-gray-500 dark:text-gray-300">
+                    To be The Centre of Excellence for Spices
+                  </p>
+                </div>
+
+                <div
+                  className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl"
+                  data-aos="fade-up"
+                >
+                  <span className="inline-block text-green-500 dark:text-green-400">
+                    <div className="w-16">
+                      <Image src={daun} layout="responsive" objectFit="cover" />
+                    </div>
+                  </span>
+                  <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                    OUR MISSION
+                  </h1>
+
+                  <p className="text-gray-500 dark:text-gray-300">
+                    We grow and sell quality, fresh spices products that
+                    simplify and enhance the consumer cooking experience. We
+                    grow the highest-quality products in the spices market
+                    segment in worldwide
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
       <div className="flex justify-center relative">
         <div className="max-w-7xl w-full py-16">
           <div className="lg:text-center">
-            <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
+            <h2
+              className="text-base text-green-600 font-semibold tracking-wide uppercase"
+              data-aos="fade-down"
+            >
               Gallery
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p
+              className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              data-aos="fade-left"
+            >
               OUR GALLERY
             </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            <p
+              className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"
+              data-aos="fade-right"
+            >
               Documentation images of our company
             </p>
           </div>
@@ -188,6 +263,7 @@ export default function Home() {
                   <a
                     href="#"
                     className="block h-64 rounded-lg shadow-lg bg-white w-full relative overflow-hidden"
+                    data-aos="fade-up"
                   >
                     <Image src={el.image} layout="fill" objectFit="cover" />
                   </a>
@@ -201,13 +277,22 @@ export default function Home() {
       <div className="flex justify-center relative">
         <div className="max-w-7xl w-full py-16">
           <div className="lg:text-center">
-            <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
+            <h2
+              className="text-base text-green-600 font-semibold tracking-wide uppercase"
+              data-aos="fade-down"
+            >
               Testimonials
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p
+              className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              data-aos="fade-left"
+            >
               WHAT PEOPLE SAID?
             </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            <p
+              className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"
+              data-aos="fade-right"
+            >
               What people say about our company and services
             </p>
           </div>
@@ -218,6 +303,7 @@ export default function Home() {
                 <div
                   key={idx}
                   className="bg-white dark:bg-gray-800 w-72 shadow-lg mx-auto rounded-xl p-4"
+                  data-aos="fade-up"
                 >
                   <p className="text-gray-600 dark:text-white">
                     <span className="font-bold text-green-500 text-lg">“</span>

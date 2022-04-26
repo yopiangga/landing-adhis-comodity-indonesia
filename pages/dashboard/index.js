@@ -28,7 +28,7 @@ function Dashboard() {
     <LayoutDashboard menuActive="0" title="Dashboard">
       <div className="overflow-auto h-screen pb-24 px-4 md:px-6">
         <h1 className="text-4xl font-semibold text-gray-800 dark:text-white">
-          Good afternoom, Admin
+          Good afternoon, Admin
         </h1>
         <h2 className="text-md text-gray-400">
           Here&#x27;s what&#x27;s happening with your ambassador account today.

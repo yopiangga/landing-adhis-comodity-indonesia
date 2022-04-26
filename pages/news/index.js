@@ -23,15 +23,21 @@ const news = [
 
 export default function News() {
   return (
-    <LayoutLanding>
+    <LayoutLanding page="news" title="News">
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
+            <h1
+              className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
+              data-aos="fade-left"
+            >
               News
             </h1>
 
-            <p className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+            <p
+              className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+              data-aos="fade-right"
+            >
               Latest story from our company
             </p>
           </div>
@@ -46,6 +52,7 @@ export default function News() {
                 <div
                   key={idx}
                   className="bg-white p-6 rounded-lg flex flex-col"
+                  data-aos="fade-up"
                 >
                   <div className="w-full h-48 relative ">
                     <Image src={el.image} layout="fill" objectFit="cover" />

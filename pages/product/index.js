@@ -401,15 +401,21 @@ export default function Product() {
   }
 
   return (
-    <LayoutLanding>
+    <LayoutLanding page="product" title="Product">
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
+            <h1
+              className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
+              data-aos="fade-left"
+            >
               Product
             </h1>
 
-            <p className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+            <p
+              className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+              data-aos="fade-right"
+            >
               Our products are guaranteed quality and quality
             </p>
           </div>
@@ -418,8 +424,10 @@ export default function Product() {
 
       <div className="flex justify-center">
         <div className="w-full max-w-7xl py-16 px-12">
-          <h1 className="text-3xl mb-3">OUR BEST PRODUCTS</h1>
-          <p>
+          <h1 className="text-3xl mb-3" data-aos="fade-up">
+            OUR BEST PRODUCTS
+          </h1>
+          <p data-aos="fade-up">
             We are committed to bringing high-quality products and comprehensive
             services. We have proudly offered our Commodity Products for
             International Marketing with that positive attitude and confidence.
@@ -434,6 +442,7 @@ export default function Product() {
                 <div
                   key={idx}
                   className="relative w-full flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 mx-auto border border-white bg-white"
+                  data-aos="fade-up"
                 >
                   <div className="w-full md:w-72 md:h-full h-64 relative">
                     <Image src={el.image[0]} layout="fill" objectFit="cover" />

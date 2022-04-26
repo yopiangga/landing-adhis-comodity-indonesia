@@ -45,15 +45,21 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <LayoutLanding>
+    <LayoutLanding page="faq" title="FAQ">
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
+            <h1
+              className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
+              data-aos="fade-left"
+            >
               FAQ
             </h1>
 
-            <p className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+            <p
+              className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+              data-aos="fade-right"
+            >
               Frequently Asked Question
             </p>
           </div>
@@ -65,7 +71,7 @@ export default function Faq() {
           <div className="bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl">
             {faqs.map((el, idx) => {
               return (
-                <details key={idx} className="p-6 group">
+                <details key={idx} className="p-6 group" data-aos="fade-up">
                   <summary className="flex items-center justify-between cursor-pointer">
                     <h5 className="text-lg font-medium text-gray-900">
                       {el.question}

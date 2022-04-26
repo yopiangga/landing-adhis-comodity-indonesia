@@ -30,10 +30,10 @@ export function NavbarDashboard({ title }) {
   );
 }
 
-export function NavbarLanding() {
+export function NavbarLanding({ id }) {
   return (
-    <div>
-      <div className="navbar bg-transparent absolute z-50">
+    <div className="flex justify-center">
+      <div className="navbar bg-transparent absolute z-50 w-full">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-white lg:hidden">
@@ -58,43 +58,91 @@ export function NavbarLanding() {
             >
               <li>
                 <Link href={"/"}>
-                  <a>Home</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "home" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    Home
+                  </a>
                 </Link>
               </li>
 
               <li>
                 <Link href={"/about"}>
-                  <a>About Us</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "about" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    About Us
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/product"}>
-                  <a>Product</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "product" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    Product
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/news"}>
-                  <a>News</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "news" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    News
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/team"}>
-                  <a>Our Team</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "team" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    Our Team
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/faq"}>
-                  <a>FAQ</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "faq" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    FAQ
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/term"}>
-                  <a>Term</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "term" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    Term
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/certificate"}>
-                  <a>Certificate</a>
+                  <a
+                    className={`active:bg-green-500 ${
+                      id == "certificate" ? "bg-green-500 text-white" : ""
+                    }`}
+                  >
+                    Certificate
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -103,47 +151,95 @@ export function NavbarLanding() {
             <Image src={logo2} layout="responsive" objectFit="cover" />
           </a>
         </div>
-        <div className="navbar-end hidden lg:flex text-white text-lg font-medium">
+        <div className="navbar-end hidden lg:flex text-white text-lg font-medium w-full">
           <ul className="menu menu-horizontal p-0">
             <li>
               <Link href={"/"}>
-                <a className="active:bg-green-500">Home</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "home" ? "bg-green-500" : ""
+                  }`}
+                >
+                  Home
+                </a>
               </Link>
             </li>
 
             <li>
               <Link href={"/about"}>
-                <a className="active:bg-green-500">About Us</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "about" ? "bg-green-500" : ""
+                  }`}
+                >
+                  About Us
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/product"}>
-                <a className="active:bg-green-500">Product</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "product" ? "bg-green-500" : ""
+                  }`}
+                >
+                  Product
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/news"}>
-                <a className="active:bg-green-500">News</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "news" ? "bg-green-500" : ""
+                  }`}
+                >
+                  News
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/team"}>
-                <a className="active:bg-green-500">Our Team</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "team" ? "bg-green-500" : ""
+                  }`}
+                >
+                  Our Team
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/faq"}>
-                <a className="active:bg-green-500">FAQ</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "faq" ? "bg-green-500" : ""
+                  }`}
+                >
+                  FAQ
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/term"}>
-                <a className="active:bg-green-500">Term</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "term" ? "bg-green-500" : ""
+                  }`}
+                >
+                  Term
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/certificate"}>
-                <a className="active:bg-green-500">Certificate</a>
+                <a
+                  className={`active:bg-green-500 ${
+                    id == "certificate" ? "bg-green-500" : ""
+                  }`}
+                >
+                  Certificate
+                </a>
               </Link>
             </li>
           </ul>

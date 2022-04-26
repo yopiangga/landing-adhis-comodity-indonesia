@@ -54,15 +54,21 @@ export default function NewsDetail() {
   const [article, setArticle] = useState(news[id - 1]);
 
   return (
-    <LayoutLanding>
+    <LayoutLanding page="news" title="News">
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600">
+            <h1
+              className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
+              data-aos="fade-left"
+            >
               Detail News
             </h1>
 
-            <p className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+            <p
+              className="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl"
+              data-aos="fade-right"
+            >
               Latest story from our company
             </p>
           </div>
@@ -71,14 +77,18 @@ export default function NewsDetail() {
 
       <div className="flex justify-center">
         <div className="w-full max-w-7xl py-16 px-12">
-          <h1 className="text-4xl font-bold mb-2">{article.title}</h1>
-          <h5 className="font-medium text-sm mb-8">Date : {article.date}</h5>
-          <div className="w-full relative mb-8">
+          <h1 className="text-4xl font-bold mb-2" data-aos="fade-up">
+            {article.title}
+          </h1>
+          <h5 className="font-medium text-sm mb-8" data-aos="fade-up">
+            Date : {article.date}
+          </h5>
+          <div className="w-full relative mb-8" data-aos="fade-up">
             <Image src={article.image} layout="responsive" objectFit="cover" />
           </div>
           {article.essay.map((item, index) => {
             return (
-              <p key={index} className="mb-5">
+              <p key={index} className="mb-5" data-aos="fade-up">
                 {item}
               </p>
             );
