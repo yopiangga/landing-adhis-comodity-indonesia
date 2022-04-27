@@ -11,6 +11,7 @@ import { FaLeaf } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
+import Flags from "country-flag-icons/react/3x2";
 
 import g1 from "public/gallery/1.jpg";
 import g2 from "public/gallery/2.jpg";
@@ -79,18 +80,21 @@ export default function Home() {
       text: "Happy with the quality, packaging, and selection of spices. Customer service was fantastic to work with quick to respond and assist with great resolution.",
       icon: "",
       country: "India",
+      id_country: "IN",
     },
     {
       name: "Bian Sittichai",
       text: "The Shipping was fast. The package arrived on time and was wrapped very securely.",
       icon: "",
       country: "Thailand",
+      id_country: "TH",
     },
     {
       name: "Ammar Raiyyan",
       text: "The color, the scent, and the quality are the best. A much better grade of turmeric than found in most other companies.",
       icon: "",
       country: "Arabia",
+      id_country: "SA",
     },
   ];
 
@@ -234,8 +238,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center relative">
-        <div className="max-w-7xl w-full py-16">
+      <div className="flex justify-center relative bg-gray-100">
+        <div className="max-w-7xl w-11/12 py-16 ">
           <div className="lg:text-center">
             <h2
               className="text-base text-green-600 font-semibold tracking-wide uppercase"
@@ -275,7 +279,7 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center relative">
-        <div className="max-w-7xl w-full py-16">
+        <div className="max-w-7xl w-11/12 py-16">
           <div className="lg:text-center">
             <h2
               className="text-base text-green-600 font-semibold tracking-wide uppercase"
@@ -315,9 +319,17 @@ export default function Home() {
                       <span className="font-semibold text-green-500 text-sm">
                         {el.name}
                       </span>
-                      <span className="dark:text-gray-400 text-xs flex items-center">
+                      <span className="dark:text-gray-400 text-xs flex items-center gap-3">
                         {el.country}
-                        <img src="/icons/rocket.svg" className="ml-2 h-4 w-4" />
+                        {el.id_country == "IN" ? (
+                          <Flags.IN title="United States" className="w-5 h-5" />
+                        ) : el.id_country == "TH" ? (
+                          <Flags.TH title="United States" className="w-5 h-5" />
+                        ) : el.id_country == "SA" ? (
+                          <Flags.SA title="United States" className="w-5 h-5" />
+                        ) : (
+                          ""
+                        )}
                       </span>
                     </div>
                   </div>

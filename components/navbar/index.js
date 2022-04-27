@@ -34,7 +34,7 @@ export function NavbarLanding({ id }) {
   return (
     <div className="flex justify-center">
       <div className="navbar bg-transparent absolute z-50 w-full">
-        <div className="navbar-start">
+        <div className="navbar-start w-full lg:w-fit">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-white lg:hidden">
               <svg
@@ -147,7 +147,7 @@ export function NavbarLanding({ id }) {
               </li>
             </ul>
           </div>
-          <a className=" text-xl w-28 bg-black">
+          <a className=" text-xl w-28 bg-black lg:mr-auto ml-auto">
             <Image src={logo2} layout="responsive" objectFit="cover" />
           </a>
         </div>

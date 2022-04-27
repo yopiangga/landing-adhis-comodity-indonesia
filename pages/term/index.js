@@ -1,12 +1,17 @@
 import LayoutLanding from "layout/landing/index";
 
 import Image from "next/image";
+import vision from "public/bg/vision-mission.jpg";
 
 export default function Faq() {
   return (
     <LayoutLanding page="term" title="Term">
-      <section className="text-white bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
+      <section className="text-white bg-gray-900 relative">
+        <div className="w-full h-full overflow-hidden absolute">
+          <Image src={vision} layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+        <div className="max-w-screen-xl relative px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
@@ -27,9 +32,9 @@ export default function Faq() {
       </section>
 
       <div className="flex justify-center">
-        <div className="w-full max-w-7xl py-16">
-          <div className="container mx-auto px-6 p-6 bg-white dark:bg-gray-800">
-            <div className="mb-16 text-center">
+        <div className="w-11/12 max-w-7xl py-16">
+          <div className="container mx-auto py-6 bg-white dark:bg-gray-800">
+            <div className="mb-6 lg:mb-12 text-center">
               <h2
                 className="text-base text-green-600 font-semibold tracking-wide uppercase"
                 data-aos="fade-up"
@@ -43,7 +48,7 @@ export default function Faq() {
                 OUR DELIVERY TERM
               </p>
             </div>
-            <div className="flex flex-wrap my-12 dark:text-white">
+            <div className="flex flex-wrap my-6 dark:text-white">
               <div
                 className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8"
                 data-aos="fade-right"
@@ -126,7 +131,7 @@ export default function Faq() {
       </div>
 
       <div className="bg-white dark:bg-gray-800 ">
-        <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+        <div className="text-center w-11/12 mx-auto py-12 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
             <span className="block" data-aos="fade-up">
               For More Information About

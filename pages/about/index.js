@@ -15,7 +15,7 @@ import jabat_tangan from "public/icon/jabat-tangan.png";
 import jempol from "public/icon/jempol.png";
 import medali from "public/icon/medali.png";
 import stopwatch from "public/icon/stopwatch.png";
-
+import vision from "public/bg/vision-mission.jpg";
 import coffee3 from "public/product/coffee3.jpg";
 import galangal2 from "public/product/galangal2.jpg";
 import coffee2 from "public/product/coffee2.jpg";
@@ -24,8 +24,12 @@ import chili2 from "public/product/chili2.jpg";
 export default function About() {
   return (
     <LayoutLanding page="about" title="About us">
-      <section className="text-white bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
+      <section className="text-white bg-gray-900 relative">
+        <div className="w-full h-full overflow-hidden absolute">
+          <Image src={vision} layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+        <div className="max-w-screen-xl relative px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
@@ -56,8 +60,8 @@ export default function About() {
       </section>
 
       <div className="flex justify-center bg-white">
-        <div className=" w-full max-w-7xl dark:bg-gray-800 overflow-hidden relative lg:flex lg:items-center">
-          <div className="w-full  py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+        <div className=" w-11/12 max-w-7xl dark:bg-gray-800 overflow-hidden relative lg:flex lg:items-center">
+          <div className="w-full  py-12 sm:px-6 lg:py-16 lg:px-8 z-20">
             <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
               <span className="block" data-aos="fade-right">
                 PT ADHIS COMMODITY INDONESIA
@@ -74,7 +78,7 @@ export default function About() {
               a focus on efficiency and sustainability at every level.
             </p>
           </div>
-          <div className="flex items-center gap-8 p-8 lg:p-24">
+          <div className="flex flex-col md:flex-row items-center md:gap-8 p-8 lg:p-24">
             <div className="w-56" data-aos="fade-left">
               <Image src={coffee3} layout="responsive" objectFit="cover" />
             </div>
@@ -91,7 +95,7 @@ export default function About() {
       </div>
 
       <section className="bg-white dark:bg-gray-900">
-        <div className="container px-6 py-10 mx-auto">
+        <div className="container w-11/12 py-10 mx-auto">
           <h1
             className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
             data-aos="fade-right"
@@ -178,7 +182,7 @@ export default function About() {
       </section>
 
       <div className="flex justify-center bg-gray-50 overflow-hidden">
-        <div className="container w-full max-w-7xl py-16 m-auto space-y-8 text-gray-500 px-12">
+        <div className="container w-11/12 max-w-7xl py-16 m-auto space-y-8 text-gray-500 ">
           <div>
             <span
               className="text-gray-600 text-lg font-semibold"

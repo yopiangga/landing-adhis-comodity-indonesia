@@ -42,6 +42,7 @@ import turmeric1 from "public/product/turmeric1.jpg";
 import turmeric2 from "public/product/turmeric2.jpg";
 import turmeric3 from "public/product/turmeric3.jpg";
 import { useState } from "react";
+import vision from "public/bg/vision-mission.jpg";
 
 const products = [
   {
@@ -402,8 +403,12 @@ export default function Product() {
 
   return (
     <LayoutLanding page="product" title="Product">
-      <section className="text-white bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
+      <section className="text-white bg-gray-900 relative">
+        <div className="w-full h-full overflow-hidden absolute">
+          <Image src={vision} layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+        <div className="max-w-screen-xl relative px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
@@ -423,7 +428,7 @@ export default function Product() {
       </section>
 
       <div className="flex justify-center">
-        <div className="w-full max-w-7xl py-16 px-12">
+        <div className="w-11/12 max-w-7xl py-16 ">
           <h1 className="text-3xl mb-3" data-aos="fade-up">
             OUR BEST PRODUCTS
           </h1>

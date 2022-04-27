@@ -12,6 +12,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.4",
     "carousel-react-rcdev": "^0.0.3",
+    "country-flag-icons": "^1.4.26",
     "daisyui": "^2.11.0",
     "firebase": "^9.6.9",
     "firebase-tools": "^10.4.0",

@@ -1,6 +1,7 @@
 import LayoutLanding from "layout/landing/index";
 
 import Image from "next/image";
+import vision from "public/bg/vision-mission.jpg";
 
 const faqs = [
   {
@@ -46,8 +47,12 @@ const faqs = [
 export default function Faq() {
   return (
     <LayoutLanding page="faq" title="FAQ">
-      <section className="text-white bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
+      <section className="text-white bg-gray-900 relative">
+        <div className="w-full h-full overflow-hidden absolute">
+          <Image src={vision} layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+        <div className="max-w-screen-xl relative px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
@@ -67,7 +72,7 @@ export default function Faq() {
       </section>
 
       <div className="flex justify-center">
-        <div className="w-full max-w-7xl py-16 px-12">
+        <div className="w-11/12 max-w-7xl py-16">
           <div className="bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl">
             {faqs.map((el, idx) => {
               return (

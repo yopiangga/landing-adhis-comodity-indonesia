@@ -7,6 +7,7 @@ import mendagri from "public/certificate/mendagri.jpg";
 import oss from "public/certificate/oss.jpg";
 import { useState } from "react";
 import { addMessage } from "services/message_services";
+import vision from "public/bg/vision-mission.jpg";
 
 export default function Faq() {
   const [firstname, setFirstName] = useState();
@@ -47,8 +48,12 @@ export default function Faq() {
 
   return (
     <LayoutLanding page="certificate" title="Certificate">
-      <section className="text-white bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
+      <section className="text-white bg-gray-900 relative">
+        <div className="w-full h-full overflow-hidden absolute">
+          <Image src={vision} layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+        <div className="max-w-screen-xl relative px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
@@ -68,7 +73,7 @@ export default function Faq() {
       </section>
 
       <div className="flex justify-center">
-        <div className="w-full max-w-7xl py-16">
+        <div className="w-11/12 max-w-7xl py-16">
           <div className="container mx-auto px-6 p-6 bg-white dark:bg-gray-800">
             <div className="mb-16 text-center">
               <h2
@@ -115,7 +120,7 @@ export default function Faq() {
       </div>
 
       <section className="bg-gray-100 flex justify-center">
-        <div className="max-w-7xl w-full py-16 px-12 mx-auto">
+        <div className="max-w-7xl w-11/12 py-16 mx-auto">
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:py-12 lg:col-span-2">
               <p
@@ -128,7 +133,9 @@ export default function Faq() {
 
               <div className="mt-8">
                 <a
-                  href=""
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://wa.me/6283804175139"
                   className="text-2xl font-bold text-green-600"
                   data-aos="fade-right"
                 >
@@ -136,10 +143,26 @@ export default function Faq() {
                   +62 83804175139{" "}
                 </a>
 
-                <address className="mt-2 not-italic" data-aos="fade-up">
+                <br />
+
+                <a
+                  href="https://www.instagram.com/abi_adhis/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 not-italic"
+                  data-aos="fade-up"
+                >
                   Instagram @abi_adhis
-                </address>
-                <address data-aos="fade-up">adhiscomindo@gmail.com</address>
+                </a>
+                <br />
+                <a
+                  href="mailto:adhiscomindo@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-aos="fade-up"
+                >
+                  adhiscomindo@gmail.com
+                </a>
               </div>
             </div>
 

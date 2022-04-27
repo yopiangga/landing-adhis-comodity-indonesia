@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import news1 from "public/news/news1.jpg";
 import news2 from "public/news/news2.jpg";
+import vision from "public/bg/vision-mission.jpg";
 
 const news = [
   {
@@ -24,8 +25,13 @@ const news = [
 export default function News() {
   return (
     <LayoutLanding page="news" title="News">
-      <section className="text-white bg-gray-900">
-        <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
+      <section className="text-white bg-gray-900 relative">
+        <div className="w-full h-full overflow-hidden absolute">
+          <Image src={vision} layout="fill" objectFit="cover" />
+        </div>
+        <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
+
+        <div className="max-w-screen-xl relative px-4 py-32 mx-auto lg:h-fit lg:items-center lg:flex">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-green-500 to-green-600"
@@ -45,7 +51,7 @@ export default function News() {
       </section>
 
       <div className="flex justify-center">
-        <div className="w-full max-w-7xl py-16 px-12">
+        <div className="w-11/12 max-w-7xl py-16">
           <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 w-full mt-6">
             {news.map((el, idx) => {
               return (
