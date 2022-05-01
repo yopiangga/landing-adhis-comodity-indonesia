@@ -8,6 +8,7 @@ import oss from "public/certificate/oss.jpg";
 import { useState } from "react";
 import { addMessage } from "services/message_services";
 import vision from "public/bg/vision-mission.jpg";
+import dots from "public/bg/dots.png";
 
 export default function Faq() {
   const [firstname, setFirstName] = useState();
@@ -119,8 +120,9 @@ export default function Faq() {
         </div>
       </div>
 
-      <section className="bg-gray-100 flex justify-center">
-        <div className="max-w-7xl w-11/12 py-16 mx-auto">
+      <section className="bg-gray-100 flex justify-center relative">
+        <div className="w-full h-full bg-leaves absolute"></div>
+        <div className="max-w-7xl w-11/12 py-16 mx-auto relative">
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:py-12 lg:col-span-2">
               <p

@@ -31,8 +31,9 @@ export default function Faq() {
         </div>
       </section>
 
-      <div className="flex justify-center">
-        <div className="w-11/12 max-w-7xl py-16">
+      <div className="flex justify-center relative">
+        <div className="w-full h-full bg-leaves absolute"></div>
+        <div className="w-11/12 max-w-7xl py-16 relative">
           <div className="container mx-auto py-6 bg-white dark:bg-gray-800">
             <div className="mb-6 lg:mb-12 text-center">
               <h2

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-leaves {
+    background-image: url('./../public/bg/leaves.png');
+    background-repeat: repeat;
+}

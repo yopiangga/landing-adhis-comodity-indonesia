@@ -10,7 +10,7 @@ export function NavbarDashboard({ title }) {
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end flex items-center">
-          <h4 className="mr-2">Alfian Prisma Yopiangga</h4>
+          <h4 className="mr-2">Admin</h4>
           <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img src="https://api.lorem.space/image/face?hash=33791" />

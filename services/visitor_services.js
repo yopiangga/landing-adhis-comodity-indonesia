@@ -10,9 +10,12 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 
-export async function addVisitor(time, device, ip) {
+export async function addVisitor(device, ip) {
   const db = getFirestore();
-  return await setDoc(doc(db, "visitors", time), {
+  const date = new Date();
+  const time = date.getTime();
+
+  return await setDoc(doc(db, "visitors", time.toString()), {
     time: time ?? "",
     device: device ?? "",
     ip: ip ?? "",

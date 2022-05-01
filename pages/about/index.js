@@ -20,6 +20,7 @@ import coffee3 from "public/product/coffee3.jpg";
 import galangal2 from "public/product/galangal2.jpg";
 import coffee2 from "public/product/coffee2.jpg";
 import chili2 from "public/product/chili2.jpg";
+import dots from "public/bg/dots.png";
 
 export default function About() {
   return (
@@ -59,7 +60,8 @@ export default function About() {
         </div>
       </section>
 
-      <div className="flex justify-center bg-white">
+      <div className="flex justify-center bg-white relative">
+        <div className="w-full h-full bg-leaves absolute"></div>
         <div className=" w-11/12 max-w-7xl dark:bg-gray-800 overflow-hidden relative lg:flex lg:items-center">
           <div className="w-full  py-12 sm:px-6 lg:py-16 lg:px-8 z-20">
             <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
@@ -94,7 +96,10 @@ export default function About() {
         </div>
       </div>
 
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white dark:bg-gray-900 relative">
+        <div className="lg:w-96 w-1/2 h-36 absolute top-1 right-0">
+          <Image src={dots} layout="fill" objectFit="cover" />
+        </div>
         <div className="container w-11/12 py-10 mx-auto">
           <h1
             className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
@@ -254,8 +259,9 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex justify-center">
-        <div className="flex items-center justify-center px-5 py-16">
+      <div className="flex justify-center relative">
+        <div className="w-full h-full bg-leaves absolute"></div>
+        <div className="flex items-center justify-center px-5 py-16 relative">
           <div
             className="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50"
             data-aos="fade-up"

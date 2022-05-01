@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { FiHome, FiBox, FiUsers, FiDollarSign } from "react-icons/fi";
+import {
+  FiHome,
+  FiBox,
+  FiUsers,
+  FiDollarSign,
+  FiMessageSquare,
+} from "react-icons/fi";
 import { useState } from "react";
 
 export function SidebarDashboard({ menuActive }) {
@@ -10,20 +16,25 @@ export function SidebarDashboard({ menuActive }) {
       href: "/dashboard",
     },
     {
-      title: "Produk",
-      icon: <FiBox />,
-      href: "/dashboard/products",
+      title: "Message",
+      icon: <FiMessageSquare />,
+      href: "/dashboard/messages",
     },
-    {
-      title: "Pengguna",
-      icon: <FiUsers />,
-      href: "/dashboard/users",
-    },
-    {
-      title: "Transaksi",
-      icon: <FiDollarSign />,
-      href: "/dashboard/transactions",
-    },
+    // {
+    //   title: "Produk",
+    //   icon: <FiBox />,
+    //   href: "/dashboard/products",
+    // },
+    // {
+    //   title: "Pengguna",
+    //   icon: <FiUsers />,
+    //   href: "/dashboard/users",
+    // },
+    // {
+    //   title: "Transaksi",
+    //   icon: <FiDollarSign />,
+    //   href: "/dashboard/transactions",
+    // },
   ];
 
   return (

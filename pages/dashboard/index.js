@@ -51,15 +51,7 @@ function Dashboard() {
                 <p className="text-gray-400 text-sm">Seluruh Pengunjung</p>
               </div>
             </div>
-            <div className="">
-              <div className="shadow-lg px-4 py-6 w-full bg-white dark:bg-gray-700 relative">
-                <p className="text-2xl text-black dark:text-white font-bold">
-                  {user}
-                </p>
-                <p className="text-gray-400 text-sm">Total Pengguna</p>
-              </div>
-            </div>
-            <div className="">
+            {/* <div className="">
               <div className="shadow-lg px-4 py-6 w-full bg-white dark:bg-gray-700 relative">
                 <p className="text-2xl text-black dark:text-white font-bold">
                   {product}
@@ -70,11 +62,20 @@ function Dashboard() {
             <div className="">
               <div className="shadow-lg px-4 py-6 w-full bg-white dark:bg-gray-700 relative">
                 <p className="text-2xl text-black dark:text-white font-bold">
+                  {user}
+                </p>
+                <p className="text-gray-400 text-sm">Total Pengguna</p>
+              </div>
+            </div>
+            
+            <div className="">
+              <div className="shadow-lg px-4 py-6 w-full bg-white dark:bg-gray-700 relative">
+                <p className="text-2xl text-black dark:text-white font-bold">
                   {transaction}
                 </p>
                 <p className="text-gray-400 text-sm">Total Transaksi</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

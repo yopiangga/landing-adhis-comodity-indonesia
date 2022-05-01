@@ -119,7 +119,7 @@ function DashboardEditProduct() {
   };
 
   return (
-    <LayoutDashboard menuActive="1" title="Edit Produk">
+    <LayoutDashboard menuActive="2" title="Edit Produk">
       <div className="overflow-auto h-screen pb-24 px-4 md:px-6">
         <div className="my-6 w-full space-y-4 md:space-x-4 md:space-y-0 flex-col md:flex-row">
           <div className="mb-6"></div>

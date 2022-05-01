@@ -33,12 +33,25 @@ import g17 from "public/gallery/17.jpg";
 import g18 from "public/gallery/18.jpg";
 import g19 from "public/gallery/19.jpg";
 import g20 from "public/gallery/20.jpg";
+import g21 from "public/gallery/21.jpg";
+import g22 from "public/gallery/22.jpg";
+import g23 from "public/gallery/23.jpg";
+import g24 from "public/gallery/24.jpg";
+import g25 from "public/gallery/25.jpg";
+import g26 from "public/gallery/26.jpg";
 import { NavbarLanding } from "components/navbar";
 
 import global from "public/icon/global.png";
 import daun from "public/icon/daun.png";
+import dots from "public/bg/dots.png";
+import { useEffect } from "react";
+import { addVisitor } from "services/visitor_services";
 
 export default function Home() {
+  useEffect(() => {
+    addVisitor("", "");
+  }, []);
+
   const gallery = [
     {
       image: g1,
@@ -72,6 +85,78 @@ export default function Home() {
       image: g8,
       link: "",
     },
+    {
+      image: g9,
+      link: "",
+    },
+    {
+      image: g10,
+      link: "",
+    },
+    {
+      image: g11,
+      link: "",
+    },
+    {
+      image: g12,
+      link: "",
+    },
+    {
+      image: g13,
+      link: "",
+    },
+    {
+      image: g14,
+      link: "",
+    },
+    {
+      image: g15,
+      link: "",
+    },
+    {
+      image: g16,
+      link: "",
+    },
+    {
+      image: g17,
+      link: "",
+    },
+    {
+      image: g18,
+      link: "",
+    },
+    {
+      image: g19,
+      link: "",
+    },
+    {
+      image: g20,
+      link: "",
+    },
+    {
+      image: g21,
+      link: "",
+    },
+    {
+      image: g22,
+      link: "",
+    },
+    {
+      image: g23,
+      link: "",
+    },
+    {
+      image: g24,
+      link: "",
+    },
+    {
+      image: g25,
+      link: "",
+    },
+    {
+      image: g26,
+      link: "",
+    },
   ];
 
   const testimonials = [
@@ -100,11 +185,11 @@ export default function Home() {
 
   return (
     <LayoutLanding page="home" title="Home">
-      <div className="relative">
+      <div className="relative lg:h-fit h-screen flex">
         <AwesomeSlider>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
-            <div className="w-full absolute">
-              <Image src={bg1} layout="responsive" objectFit="contain" />
+            <div className="w-full h-full absolute">
+              <Image src={bg1} layout="fill" objectFit="cover" />
             </div>
             <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
             <div className=" max-w-3xl relative text-center">
@@ -135,8 +220,8 @@ export default function Home() {
             </div>
           </div>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
-            <div className="w-full absolute">
-              <Image src={bg2} layout="responsive" objectFit="contain" />
+            <div className="w-full h-full absolute">
+              <Image src={bg2} layout="fill" objectFit="cover" />
             </div>
             <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
             <div className=" max-w-3xl relative text-center">
@@ -169,6 +254,7 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center relative">
+        <div className="w-full h-full bg-leaves absolute"></div>
         <div className=" w-full">
           <section className="bg-white dark:bg-gray-900">
             <div className="container px-6 py-10 mx-auto">
@@ -191,7 +277,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-2">
                 <div
-                  className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl"
+                  className="p-8 space-y-3 border-2 bg-white border-green-400 dark:border-green-300 rounded-xl"
                   data-aos="fade-up"
                 >
                   <span className="inline-block text-green-500 dark:text-green-400">
@@ -213,7 +299,7 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="p-8 space-y-3 border-2 border-green-400 dark:border-green-300 rounded-xl"
+                  className="p-8 space-y-3 border-2 bg-white border-green-400 dark:border-green-300 rounded-xl"
                   data-aos="fade-up"
                 >
                   <span className="inline-block text-green-500 dark:text-green-400">
@@ -260,25 +346,22 @@ export default function Home() {
               Documentation images of our company
             </p>
           </div>
-          <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 w-full mt-10">
-            {gallery.map((el, idx) => {
-              return (
-                <div key={idx}>
-                  <a
-                    href="#"
-                    className="block h-64 rounded-lg shadow-lg bg-white w-full relative overflow-hidden"
-                    data-aos="fade-up"
-                  >
+          <div className="h-96 lg:h-fit lg:max-h-screen w-full bg-red-100 flex mt-10">
+            <AwesomeSlider>
+              {gallery.map((el, idx) => {
+                return (
+                  <div key={idx} className="w-full h-full absolute">
                     <Image src={el.image} layout="fill" objectFit="cover" />
-                  </a>
-                </div>
-              );
-            })}
+                  </div>
+                );
+              })}
+            </AwesomeSlider>
           </div>
         </div>
       </div>
 
       <div className="flex justify-center relative">
+        <div className="w-full h-full bg-leaves absolute"></div>
         <div className="max-w-7xl w-11/12 py-16">
           <div className="lg:text-center">
             <h2
@@ -306,7 +389,7 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 w-72 shadow-lg mx-auto rounded-xl p-4"
+                  className="bg-white dark:bg-gray-800 lg:w-72 shadow-lg mx-auto rounded-xl p-4"
                   data-aos="fade-up"
                 >
                   <p className="text-gray-600 dark:text-white">
