@@ -12,7 +12,7 @@ export default function LayoutLanding({ children, title, page }) {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <main className="bg-gray-100 dark:bg-gray-800 overflow-hidden relative">
+      <main className="bg-gray-100 dark:bg-gray-800 overflow-hidden relative scrollbar-hide">
         <NavbarLanding id={page} />
         <a
           target="_blank"

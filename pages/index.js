@@ -40,6 +40,7 @@ import g24 from "public/gallery/24.jpg";
 import g25 from "public/gallery/25.jpg";
 import g26 from "public/gallery/26.jpg";
 import { NavbarLanding } from "components/navbar";
+import adhis from "public/adhis.jpg";
 
 import global from "public/icon/global.png";
 import daun from "public/icon/daun.png";
@@ -185,7 +186,7 @@ export default function Home() {
 
   return (
     <LayoutLanding page="home" title="Home">
-      <div className="relative lg:h-fit h-screen flex">
+      <div className="relative lg:h-fit h-screen flex font-teko">
         <AwesomeSlider>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
             <div className="w-full h-full absolute">
@@ -194,18 +195,18 @@ export default function Home() {
             <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
             <div className=" max-w-3xl relative text-center">
               <h2
-                className="text-2xl font-black mb-4 text-white"
+                className="text-4xl font-black mb-4 text-white"
                 data-aos="fade-up"
               >
                 Welcome to Our Company!
               </h2>
               <h1
-                className="lg:text-6xl text-xl font-bold mb-4 text-green-500"
+                className="lg:text-6xl text-5xl font-bold mb-4 text-green-500"
                 data-aos="fade-right"
               >
                 PT. ADHIS COMMODITY INDONESIA
               </h1>
-              <p className="text-white text-lg mb-10" data-aos="fade-left">
+              <p className="text-white text-2xl mb-10" data-aos="fade-left">
                 WE ARE THE LEADING COMPANY IN THE CULTIVATION AND MARKETING OF
                 FRESH SPICES TO INTERNATIONAL MARKETS
               </p>
@@ -226,18 +227,18 @@ export default function Home() {
             <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
             <div className=" max-w-3xl relative text-center">
               <h2
-                className="text-2xl font-black mb-4 text-white"
+                className="text-4xl font-black mb-4 text-white"
                 data-aos="fade-up"
               >
                 Welcome to Our Company!
               </h2>
               <h1
-                className="lg:text-6xl text-xl font-bold mb-4 text-green-500"
+                className="lg:text-6xl text-5xl font-bold mb-4 text-green-500"
                 data-aos="fade-left"
               >
                 PT. ADHIS COMMODITY INDONESIA
               </h1>
-              <p className="text-white text-lg mb-10" data-aos="fade-right">
+              <p className="text-white text-2xl mb-10" data-aos="fade-right">
                 OUR FRESH SPICES MAKE FOOD AND DRINK AN EXPERIENCE TO REMEMBER
               </p>
               <Link href={`/about`}>
@@ -253,11 +254,22 @@ export default function Home() {
         </AwesomeSlider>
       </div>
 
+      {/* <div className="flex justify-center relative bg-gray-100">
+        <div className="max-w-7xl w-11/12 py-16 ">
+          <div className="lg:hidden block w-full h-48 relative mt-12 rounded-lg overflow-hidden">
+            <Image src={adhis} layout="fill" objectFit="cover" />
+          </div>
+        </div>
+      </div> */}
+
       <div className="flex justify-center relative">
         <div className="w-full h-full bg-leaves absolute"></div>
         <div className=" w-full">
           <section className="bg-white dark:bg-gray-900">
             <div className="container px-6 py-10 mx-auto">
+              <div className=" block w-full h-72 lg:h-96 lg:w-9/12 mx-auto relative mb-12 rounded-lg overflow-hidden">
+                <Image src={adhis} layout="fill" objectFit="cover" />
+              </div>
               <h1
                 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
                 data-aos="fade-right"

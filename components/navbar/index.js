@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo2 from "public/logo2.png";
+import logo2 from "public/logo.png";
 import Link from "next/link";
 
 export function NavbarDashboard({ title }) {
@@ -32,14 +32,19 @@ export function NavbarDashboard({ title }) {
 
 export function NavbarLanding({ id }) {
   return (
-    <div className="flex justify-center">
-      <div className="navbar bg-transparent absolute z-50 w-full">
-        <div className="navbar-start w-full lg:w-fit">
-          <div className="dropdown">
+    <div className="flex flex-col items-center bg-transparent w-full">
+      <div className=" w-full h-24 bg-gray-900 flex justify-center py-3">
+        <div className="w-20 px-3 bg-white">
+          <Image src={logo2} layout="responsive" objectFit="cover" />
+        </div>
+      </div>
+      <div className="navbar bg-white  w-full">
+        <div className="navbar-start w-full lg:w-fit ">
+          <div className="dropdown mx-auto">
             <label tabIndex="0" className="btn btn-white lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 mr-3"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -51,6 +56,7 @@ export function NavbarLanding({ id }) {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
+              Menu
             </label>
             <ul
               tabIndex="0"
@@ -147,12 +153,12 @@ export function NavbarLanding({ id }) {
               </li>
             </ul>
           </div>
-          <a className=" text-xl w-28 bg-black lg:mr-auto ml-auto">
+          {/* <div className="w-20 px-3 bg-white lg:block hidden">
             <Image src={logo2} layout="responsive" objectFit="cover" />
-          </a>
+          </div> */}
         </div>
-        <div className="navbar-end hidden lg:flex text-white text-lg font-medium w-full">
-          <ul className="menu menu-horizontal p-0">
+        <div className="navbar-end hidden lg:flex text-gray-900 text-lg font-medium w-full py-1">
+          <ul className="menu menu-horizontal p-0 mx-auto">
             <li>
               <Link href={"/"}>
                 <a

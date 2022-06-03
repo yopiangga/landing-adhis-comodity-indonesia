@@ -25,6 +25,7 @@
     "react-icons": "^4.3.1",
     "react-number-format": "^4.9.1",
     "react-responsive-carousel": "^3.2.23",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "^3.0.23"
   },
   "devDependencies": {

@@ -2,7 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Teko";
+    src: url("./../public/fonts/teko/Teko-Regular.ttf");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Teko";
+    src: url("./../public/fonts/teko/Teko-Medium.ttf");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Teko";
+    src: url("./../public/fonts/teko/Teko-SemiBold.ttf");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Teko";
+    src: url("./../public/fonts/teko/Teko-Bold.ttf");
+    font-weight: 700;
+  }
+
+.font-teko {
+  font-family: 'Teko';
+}
+
 .bg-leaves {
-    background-image: url('./../public/bg/leaves.png');
+    /* background-image: url('./../public/bg/leaves.png'); */
+    background-image: url('./../public/bg/bg.jpg');
     background-repeat: repeat;
 }

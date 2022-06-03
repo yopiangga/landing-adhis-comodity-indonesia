@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo2 from "public/logo2.png";
+import logo2 from "public/logo.png";
 import Link from "next/link";
 
 export function FooterLanding() {
@@ -8,7 +8,7 @@ export function FooterLanding() {
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <span className="block w-32 bg-gray-200 rounded-lg">
+            <span className="block w-32 bg-gray-200 px-2 rounded-lg">
               <Image src={logo2} layout="responsive" objectFit="cover" />
             </span>
 
