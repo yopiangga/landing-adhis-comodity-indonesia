@@ -271,7 +271,7 @@ export default function Home() {
                 <Image src={adhis} layout="fill" objectFit="cover" />
               </div>
               <h1
-                className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
+                className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white text-center"
                 data-aos="fade-right"
               >
                 What is our <br />
@@ -281,7 +281,7 @@ export default function Home() {
               </h1>
 
               <p
-                className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300"
+                className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300 text-center"
                 data-aos="fade-up"
               >
                 A dream booster to fulfill all your needs
@@ -289,7 +289,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-2">
                 <div
-                  className="p-8 space-y-3 border-2 bg-white border-green-400 dark:border-green-300 rounded-xl"
+                  className="p-8 space-y-3 border-2 bg-white border-green-400 dark:border-green-300 rounded-xl flex flex-col items-center text-center"
                   data-aos="fade-up"
                 >
                   <span className="inline-block text-green-500 dark:text-green-400">
@@ -311,7 +311,7 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="p-8 space-y-3 border-2 bg-white border-green-400 dark:border-green-300 rounded-xl"
+                  className="p-8 space-y-3 border-2 bg-white border-green-400 dark:border-green-300 rounded-xl flex flex-col items-center text-center"
                   data-aos="fade-up"
                 >
                   <span className="inline-block text-green-500 dark:text-green-400">

@@ -33,12 +33,12 @@ export function NavbarDashboard({ title }) {
 export function NavbarLanding({ id }) {
   return (
     <div className="flex flex-col items-center bg-transparent w-full">
-      <div className=" w-full h-24 bg-gray-900 flex justify-center py-3">
-        <div className="w-20 px-3 bg-white">
+      <div className=" w-full h-24 bg-white flex justify-center py-3">
+        <div className="w-20 px-3">
           <Image src={logo2} layout="responsive" objectFit="cover" />
         </div>
       </div>
-      <div className="navbar bg-white  w-full">
+      <div className="navbar bg-gray-900 w-full">
         <div className="navbar-start w-full lg:w-fit ">
           <div className="dropdown mx-auto">
             <label tabIndex="0" className="btn btn-white lg:hidden">
@@ -157,7 +157,7 @@ export function NavbarLanding({ id }) {
             <Image src={logo2} layout="responsive" objectFit="cover" />
           </div> */}
         </div>
-        <div className="navbar-end hidden lg:flex text-gray-900 text-lg font-medium w-full py-1">
+        <div className="navbar-end hidden lg:flex text-white text-lg font-medium w-full py-1">
           <ul className="menu menu-horizontal p-0 mx-auto">
             <li>
               <Link href={"/"}>
