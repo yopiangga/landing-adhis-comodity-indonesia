@@ -190,7 +190,7 @@ export default function Home() {
         <AwesomeSlider>
           <div className="relative overflow-hidden h-full w-full flex justify-center items-center">
             <div className="w-full h-full absolute">
-              <Image src={bg1} layout="fill" objectFit="cover" />
+              <Image src={bg2} layout="fill" objectFit="cover" />
             </div>
             <div className="w-full h-full absolute bg-black bg-opacity-50"></div>
             <div className=" max-w-3xl relative text-center">

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function FooterLanding() {
   return (
-    <footer className="bg-gray-50">
+    <footer className="bg-brown text-white">
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
@@ -14,7 +14,7 @@ export function FooterLanding() {
 
             <h2 className="mt-4 font-medium">PT Adhis Commodity Indonesia</h2>
 
-            <p className=" mt-2 text-sm text-gray-500">
+            <p className=" mt-2 text-sm text-gray-300">
               We are well-known for producing better products and servicing our
               devoted customers 24/7. Our professionals have in-depth knowledge
               of the auditing procedures and inspect the final consignment
@@ -28,7 +28,7 @@ export function FooterLanding() {
             <div>
               <p className="font-medium">Company</p>
 
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-300">
                 <Link href="/home">
                   <a className="hover:opacity-75"> Home </a>
                 </Link>
@@ -47,7 +47,7 @@ export function FooterLanding() {
             <div>
               <p className="font-medium">Services</p>
 
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-300">
                 <Link href="/product">
                   <a className="hover:opacity-75"> Product </a>
                 </Link>
@@ -60,7 +60,7 @@ export function FooterLanding() {
             <div>
               <p className="font-medium">Helpful Links</p>
 
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-300">
                 <Link href="/faq">
                   <a className="hover:opacity-75"> FAQs </a>
                 </Link>
@@ -76,7 +76,7 @@ export function FooterLanding() {
             <div>
               <p className="font-medium">Legal</p>
 
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-300">
                 <a className="hover:opacity-75" href="">
                   {" "}
                   Privacy Policy{" "}
@@ -98,7 +98,7 @@ export function FooterLanding() {
           </div>
         </div>
 
-        <p className="mt-8 text-xs text-gray-500">
+        <p className="mt-8 text-xs text-gray-300">
           &copy; 2022 PT. ADHIS COMMODITY INDONESIA
         </p>
       </div>

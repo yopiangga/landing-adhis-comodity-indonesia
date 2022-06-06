@@ -28,7 +28,11 @@
 }
 
 .bg-leaves {
-    /* background-image: url('./../public/bg/leaves.png'); */
     background-image: url('./../public/bg/bg.jpg');
     background-repeat: repeat;
+}
+
+.bg-brown {
+  background-image: url('./../public/bg/footer.jpg');
+  background-size: cover;
 }
